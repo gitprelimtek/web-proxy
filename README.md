@@ -25,9 +25,9 @@ This is the Node.js server that manages subscriptions for the ClassyTaxi
 
        firebase functions:config:set app.package_name="your_android_application_id"
 
-       firebase functions:config:set app.basic_plan_sku="basic_subscription"
+       //firebase functions:config:set app.basic_plan_sku="basic_subscription"
 
-       firebase functions:config:set app.premium_plan_sku="premium_subscription"
+       //firebase functions:config:set app.premium_plan_sku="premium_subscription"
        
        firebase functions:config:set app.basic_plan_sku="eatms_basic_3mth_subscription"
 
