@@ -42,3 +42,48 @@ This is the Node.js server that manages subscriptions for the ClassyTaxi
     ```
 
 1. Run `firebase deploy` to deploy your backend to Cloud Functions for Firebase
+
+---my notes ---
+
+
+Firebase cloud function
+
+`install nodes, rpm,firebasecli`
+
+`firebase login`
+
+//playstore project
+cp service-account.json to src/
+
+```
+firebase use --add estate-and-tenant-manager
+
+//android app id in project
+
+firebase functions:config:set app.package_name="io.mtini.android.tenantmanager.pro"
+
+firebase functions:config:set app.basic_plan_sku="eatms_base_price"
+
+ firebase functions:config:set app.premium_plan_sku="eatms_premium_price"
+
+//firebase functions:config:set app.basic_subscription_plan_sku="eatms_basic_3mth_subscription"
+
+ //firebase functions:config:set app.premium_subscription_plan_sku="eatms_premium_3mth_subscription"
+
+firebase functions:config:set app.basic_plan_sku="eatms_basic_3mth_subscription"
+
+ firebase functions:config:set app.premium_plan_sku="eatms_premium_3mth_subscription"
+```
+//go to IAM Admin in console
+//go to Service Accounts
+//select service (eatms-pro-firebasefunctions-pr….), there should be one store in workspace peek dir
+//create key as json or p12
+// copy to project  src dir 
+//then build
+`npm run build`
+//or
+//build and verify lib/ has service-account.json
+ `npm run-script build`
+
+//then deploy
+`firebase deploy --only functions`
